@@ -8,10 +8,10 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
-new_float normal
+default_border pixel 2
+default_floating_border normal
 
-# Hide borders
+# You can hide container borders adjacent to the screen edges using hide_edge_borders
 hide_edge_borders none
 
 # change borders
@@ -21,7 +21,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:URWGothic-Book 11
+font pango:ProFont for Powerline 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -57,8 +57,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec google-chrome-unstable
-bindsym $mod+F3 exec pcmanfm
-# bindsym $mod+F3 exec ranger
+# bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
